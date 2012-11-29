@@ -2,7 +2,7 @@ package FuzzyParking;
 
 /**
  * Desenvolvido para o projeto da disciplina IA861, Sistemas Nebulosos
- * DAC, FEEC, Unicamp, segundo semestre de 2012
+ * DAC, FEEC, Unicamp, segundo semestre de 2012.
  * @author Eduardo F. Jucá de Castro
  */
 import java.io.InputStream;
@@ -29,10 +29,6 @@ import net.sourceforge.jFuzzyLogic.FIS;
 public class FPLC
         implements Initializable {
 
-    @FXML //  fx:id="admin"
-    private Rectangle admin; // Value injected by FXMLLoader
-    @FXML //  fx:id="area1"
-    private Rectangle area1; // Value injected by FXMLLoader
     @FXML //  fx:id="button1"
     private Button button1; // Value injected by FXMLLoader
     @FXML //  fx:id="button2"
@@ -47,12 +43,6 @@ public class FPLC
     private ComboBox<?> comboBox1; // Value injected by FXMLLoader
     @FXML //  fx:id="comboBox2"
     private ComboBox<?> comboBox2; // Value injected by FXMLLoader
-    @FXML //  fx:id="floor"
-    private Rectangle floor; // Value injected by FXMLLoader
-    @FXML //  fx:id="label1"
-    private Label label1; // Value injected by FXMLLoader
-    @FXML //  fx:id="label2"
-    private Label label2; // Value injected by FXMLLoader
     @FXML //  fx:id="root"
     private AnchorPane root; // Value injected by FXMLLoader
     @FXML //  fx:id="slot1"
@@ -401,9 +391,13 @@ public class FPLC
         }
     }
 
+    /**
+     *
+     * @param fxmlFileLocation
+     * @param resources
+     */
     @Override // This method is called by the FXMLLoader when initialization is complete
     public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
-        assert area1 != null : "fx:id=\"area1\" was not injected: check your FXML file 'ParkingLot.fxml'.";
         assert button1 != null : "fx:id=\"button1\" was not injected: check your FXML file 'ParkingLot.fxml'.";
         assert button2 != null : "fx:id=\"button2\" was not injected: check your FXML file 'ParkingLot.fxml'.";
         assert car != null : "fx:id=\"car\" was not injected: check your FXML file 'ParkingLot.fxml'.";
@@ -411,9 +405,6 @@ public class FPLC
         assert car2 != null : "fx:id=\"car2\" was not injected: check your FXML file 'ParkingLot.fxml'.";
         assert comboBox1 != null : "fx:id=\"comboBox1\" was not injected: check your FXML file 'ParkingLot.fxml'.";
         assert comboBox2 != null : "fx:id=\"comboBox2\" was not injected: check your FXML file 'ParkingLot.fxml'.";
-        assert floor != null : "fx:id=\"floor\" was not injected: check your FXML file 'ParkingLot.fxml'.";
-        assert label1 != null : "fx:id=\"label1\" was not injected: check your FXML file 'ParkingLot.fxml'.";
-        assert label2 != null : "fx:id=\"label2\" was not injected: check your FXML file 'ParkingLot.fxml'.";
         assert root != null : "fx:id=\"root\" was not injected: check your FXML file 'ParkingLot.fxml'.";
         assert slot1 != null : "fx:id=\"slot1\" was not injected: check your FXML file 'ParkingLot.fxml'.";
         assert slot2 != null : "fx:id=\"slot2\" was not injected: check your FXML file 'ParkingLot.fxml'.";

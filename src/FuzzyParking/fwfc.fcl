@@ -1,5 +1,5 @@
 // Block definition (there may be more than one block per file)
-FUNCTION_BLOCK navigation
+FUNCTION_BLOCK fwfc
 
 // Define input variables
 VAR_INPUT

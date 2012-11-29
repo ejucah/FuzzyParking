@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 /**
  * Desenvolvido para o projeto da disciplina IA861, Sistemas Nebulosos
- * DAC, FEEC, Unicamp, segundo semestre de 2012
+ * DAC, FEEC, Unicamp, segundo semestre de 2012.
  * @author Eduardo F. Jucá de Castro
  */
 public class FuzzyParking extends Application {

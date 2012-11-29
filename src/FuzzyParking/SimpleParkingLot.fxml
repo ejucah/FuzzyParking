@@ -13,12 +13,12 @@
 
 <AnchorPane id="AnchorPane" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml" fx:controller="FuzzyParking.FPLC">
   <children>
-    <Rectangle fx:id="floor" arcHeight="5.0" arcWidth="5.0" height="272.0" stroke="#9f9f9f" strokeType="INSIDE" strokeWidth="2.0" width="500.0">
+    <Rectangle id= "floor" arcHeight="5.0" arcWidth="5.0" height="272.0" stroke="#9f9f9f" strokeType="INSIDE" strokeWidth="2.0" width="500.0">
       <fill>
         <Color blue="0.749" green="0.749" red="0.749" fx:id="x1" />
       </fill>
     </Rectangle>
-    <Rectangle fx:id="area1" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="162.0" strokeType="INSIDE" width="500.0">
+    <Rectangle id="area1" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="162.0" strokeType="INSIDE" width="500.0">
       <stroke>
         <Color blue="0.625" green="0.625" red="0.625" fx:id="x3" />
       </stroke>
@@ -38,7 +38,7 @@
     </Rectangle>
     <GridPane id="gridPane1" hgap="40.0" layoutY="272.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="500.0" vgap="8.0">
       <children>
-        <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Vaga Livre" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <Label id="label1" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Vaga Livre" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
           <labelFor>
             <ComboBox fx:id="comboBox1" maxWidth="1.7976931348623157E308" onAction="#handleSlotNumber" GridPane.columnIndex="0" GridPane.rowIndex="1">
               <items>
@@ -55,7 +55,7 @@
           </GridPane.margin>
         </Label>
         <fx:reference source="comboBox1" />
-        <Label fx:id="label2" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Posiçao Inicial" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.margin="$x2" GridPane.rowIndex="0">
+        <Label id="label2" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Posiçao Inicial" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.margin="$x2" GridPane.rowIndex="0">
           <labelFor>
             <ComboBox fx:id="comboBox2" maxWidth="1.7976931348623157E308" onAction="#handleStartPosition" GridPane.columnIndex="1" GridPane.rowIndex="1">
               <items>
