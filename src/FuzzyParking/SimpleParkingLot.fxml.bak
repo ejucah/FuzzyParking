@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml" fx:controller="FuzzyParking.FPLC">
+  <children>
+    <Rectangle fx:id="floor" arcHeight="5.0" arcWidth="5.0" height="272.0" stroke="#9f9f9f" strokeType="INSIDE" strokeWidth="2.0" width="500.0">
+      <fill>
+        <Color blue="0.749" green="0.749" red="0.749" fx:id="x1" />
+      </fill>
+    </Rectangle>
+    <Rectangle fx:id="area1" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="162.0" strokeType="INSIDE" width="500.0">
+      <stroke>
+        <Color blue="0.625" green="0.625" red="0.625" fx:id="x3" />
+      </stroke>
+    </Rectangle>
+    <Rectangle fx:id="slot1" arcHeight="5.0" arcWidth="5.0" fill="$x1" height="110.0" layoutX="112.0" layoutY="50.0" stroke="YELLOW" strokeType="OUTSIDE" strokeWidth="2.0" width="110.0" />
+    <Rectangle fx:id="car1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="38.0" layoutX="121.0" layoutY="86.0" rotate="90.0" stroke="DODGERBLUE" strokeType="INSIDE" width="92.0">
+      <effect>
+        <Lighting>
+          <bumpInput>
+            <Shadow />
+          </bumpInput>
+          <light>
+            <javafx.scene.effect.Light.Distant />
+          </light>
+        </Lighting>
+      </effect>
+    </Rectangle>
+    <GridPane id="gridPane1" hgap="40.0" layoutY="272.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="500.0" vgap="8.0">
+      <children>
+        <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Vaga Livre" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <labelFor>
+            <ComboBox fx:id="comboBox1" maxWidth="1.7976931348623157E308" onAction="#handleSlotNumber" GridPane.columnIndex="0" GridPane.rowIndex="1">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Lotado" />
+                  <String fx:value="Vaga 1" />
+                  <String fx:value="Vaga 2" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+          </labelFor>
+          <GridPane.margin>
+            <Insets top="10.0" fx:id="x2" />
+          </GridPane.margin>
+        </Label>
+        <fx:reference source="comboBox1" />
+        <Label fx:id="label2" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Posiçao Inicial" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.margin="$x2" GridPane.rowIndex="0">
+          <labelFor>
+            <ComboBox fx:id="comboBox2" maxWidth="1.7976931348623157E308" onAction="#handleStartPosition" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Esquerda" />
+                  <String fx:value="Centro" />
+                  <String fx:value="Direita" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+          </labelFor>
+        </Label>
+        <fx:reference source="comboBox2" />
+        <Button fx:id="button1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleResetButton" text="Restaurar" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Button fx:id="button2" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleStartButton" text="Iniciar" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" />
+      </padding>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Rectangle id="slot4" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="110.0" layoutX="250.0" layoutY="107.0" rotate="45.0" stroke="$x3" strokeType="OUTSIDE" strokeWidth="2.0" width="110.0" />
+    <Rectangle fx:id="slot2" arcHeight="5.0" arcWidth="5.0" fill="#bfbfbf" height="110.0" layoutX="330.0" layoutY="26.0" rotate="45.0" stroke="YELLOW" strokeType="OUTSIDE" strokeWidth="2.0" width="110.0" />
+    <Rectangle fx:id="car2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="38.0" layoutX="340.0" layoutY="62.0" rotate="-45.0" stroke="DODGERBLUE" strokeType="INSIDE" width="92.0">
+      <effect>
+        <Lighting>
+          <bumpInput>
+            <Shadow />
+          </bumpInput>
+          <light>
+            <javafx.scene.effect.Light.Distant />
+          </light>
+        </Lighting>
+      </effect>
+    </Rectangle>
+    <Rectangle fx:id="car" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="38.0" layoutY="198.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="0.0" width="92.0">
+      <effect>
+        <Lighting>
+          <bumpInput>
+            <Shadow />
+          </bumpInput>
+          <light>
+            <javafx.scene.effect.Light.Distant />
+          </light>
+        </Lighting>
+      </effect>
+    </Rectangle>
+  </children>
+</AnchorPane>
