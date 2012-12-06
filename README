@@ -1,2 +1,9 @@
 FuzzyParking
 Um simulador simples para demonstrar o uso de modelo Fuzzy no controle de navegação e estacionamento autônomos de veículos. Desenvolvido para o projeto da disciplina IA861, Sistemas Nebulosos, DAC, FEEC, Unicamp, segundo semestre de 2012.
+
+Esse projeto foi desenvolvido para Java JDK 7 update 9 (com JavaFX 2.2.3), 64 bits, e NetBeans IDE 7.2.
+
+Ajuste o local do JDK em Propriedades - Bibiotecas para o projeto no NetBeans.
+
+Dúvidas e sugestões devem ser direcionadas para e.jucah@ieee.org.
+

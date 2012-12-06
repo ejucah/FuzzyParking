@@ -4,3 +4,5 @@
 *.jar
 *.war
 *.ear
+# Exceptions #
+!jFuzzyLogic_v2.1a.jar
